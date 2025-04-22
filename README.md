@@ -164,3 +164,6 @@ Desenvolver as funcionalidades conforme requisitos
 
 3. Cadastro:
 ![Cadastro](./assets/cadastro.png)
+
+#### Obs: Os wireframes são apenas sugestões, você pode criar o layout que desejar, desde que atenda aos requisitos funcionais e não funcionais.
+Use sua criatividade e faça um layout bonito e funcional.
