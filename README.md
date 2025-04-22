@@ -12,7 +12,7 @@ Desenvolver as funcionalidades conforme requisitos
 - Fonte: Courrier
 - Paletta de cores
 
-- [ ] cor1: #003366 
+- [ ] cor1: #003366
 - [ ] cor2: #006699
 - [ ] cor3: #0099CC
 - [ ] cor4: #00CCFF
