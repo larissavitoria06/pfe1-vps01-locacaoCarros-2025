@@ -9,7 +9,6 @@
         "portas": 4,
         "transmissao": "Manual",
         "valor_diaria": 120.00
-        
     },
     {
         "id": 2,
@@ -111,3 +110,30 @@
         "valor_diaria": 220.00
     }
 ]
+
+        function displayCars() {
+            const carListElement = document.getElementById('carList');
+
+            carros.forEach(car => {
+                const carCard = document.createElement('div');
+                carCard.classList.add('car-card');
+
+                carCard.innerHTML = `
+                    <img src="${car.imagem}" alt="${car.modelo}">
+                    <h3>${car.modelo}</h3>
+                    <p><strong>Marca:</strong> ${car.marca}</p>
+                    <p><strong>Ano:</strong> ${car.ano}</p>
+                    <p><strong>Combustível:</strong> ${car.combustivel}</p>
+                    <p><strong>Portas:</strong> ${car.portas}</p>
+                    <p><strong>Transmissão:</strong> ${car.transmissao}</p>
+                    <p><strong>Valor Diário:</strong> R$ ${car.valor_diaria.toFixed(2)}</p>
+                    <button>Alugar</button>
+                `;
+
+                carListElement.appendChild(carCard);
+            });
+        }
+
+        displayCars();
+
+        
