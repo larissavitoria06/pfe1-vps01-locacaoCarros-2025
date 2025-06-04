@@ -21,33 +21,18 @@ function listarCarros() {
 function alugarCarro(id) {
     const carro = carros.find(c => c.id === id);
     if (!carro) {
-        alert('alert(`Você alugou o carro com sucesso');
+        alert('Você alugou o Carro com sucesso.');
         return;
     }
-
-    alugados.push(carro);
-    localStorage.setItem('carrosAlugados', JSON.stringify(alugados));
-
-    alert(`Você alugou o ${carro.nome}!`);
 }
-
-    alugados.forEach(carro => {
-        lista.innerHTML += `
-            <div class="carro">
-                <h3>${carro.nome}</h3>
-                <p>Preço: R$ ${carro.preco} por dia</p>
-                <button onclick="removerAlugado(${carro.id})">Cancelar Aluguel</button>
-                 </div>`
-   
-    });
 
 function removerAlugado(id) {
     let alugados = JSON.parse(localStorage.getItem('carrosAlugados')) || [];
     alugados = alugados.filter(c => c.id !== id);
     localStorage.setItem('carrosAlugados', JSON.stringify(alugados));
+
+    alert('Você cancelou o aluguel com sucesso!');
     listarAlugados();
-             if (!carro) {
-        alert('alert(`Você Cancelou o carro com sucesso');
-        return;
-    }
 }
+
+
