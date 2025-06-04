@@ -11,7 +11,7 @@ carros.forEach(carro => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const nome = document.getElementById('leitor').value;
+    const nome = document.getElementById('Cliente').value;
     const cpf = document.getElementById('cpf').value;
     const dataLocacao = document.getElementById('data-locacao').value;
     const dataDevolucao = document.getElementById('data-devolucao').value;
