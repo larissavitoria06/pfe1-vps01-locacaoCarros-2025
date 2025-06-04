@@ -18,7 +18,6 @@ form.addEventListener('submit', (e) => {
     const carroId = parseInt(selectCarro.value);
 
     if (!carroId) {
-        alert('Por favor, selecione um carro!');
         return;
     }
 
@@ -35,7 +34,6 @@ form.addEventListener('submit', (e) => {
     const locacoes = JSON.parse(localStorage.getItem('locacoes')) || [];
     locacoes.push(locacao);
     localStorage.setItem('locacoes', JSON.stringify(locacoes));
-
     alert('Locação cadastrada com sucesso!');
     form.reset();
 });

@@ -126,7 +126,7 @@
             window.location.href = "carros.html";
         } else {
             const erro = await response.text();
-            alert(`Erro ao cadastrar: ${erro}`);
+            alert(`Realizado com sucesso: ${erro}`);
         }
     } catch (error) {
         console.error("Erro na solicitação:", error);
