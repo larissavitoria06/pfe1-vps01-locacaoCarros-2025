@@ -74,15 +74,14 @@
         button {
             margin-top: 10px;
             padding: 10px;
-            background-color: #882121;
-            color: white;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
             border: none;
             border-radius: 5px;
             cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #882121;
+              border-radius: 5px;
+        font-weight: bold;
+            
         }
 
         footer {
@@ -103,12 +102,3 @@
     align-items: center;
 }
 
-.oculto {
-    display: none;
-}
-
-.janela {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-}

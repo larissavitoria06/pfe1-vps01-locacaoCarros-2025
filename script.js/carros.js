@@ -111,37 +111,30 @@
     }
 ]
 
-        function displayCars() {
-            const carListElement = document.getElementById('carList');
+    async function alugarCarro(carId) {
+    try {
+        const response = await fetch('/api/alugar', {
+            method: 'POST',
+            body: JSON.stringify({ id: carId }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
 
-            carros.forEach(car => {
-                const carCard = document.createElement('div');
-                carCard.classList.add('car-card');
-
-                carCard.innerHTML = `
-                    <img src="${car.imagem}" alt="${car.modelo}">
-                    <h3>${car.modelo}</h3>
-                    <p><strong>Marca:</strong> ${car.marca}</p>
-                    <p><strong>Ano:</strong> ${car.ano}</p>
-                    <p><strong>Combustível:</strong> ${car.combustivel}</p>
-                    <p><strong>Portas:</strong> ${car.portas}</p>
-                    <p><strong>Transmissão:</strong> ${car.transmissao}</p>
-                    <p><strong>Valor Diário:</strong> R$ ${car.valor_diaria.toFixed(2)}</p>
-                    <button>Alugar</button>
-                `;
-
-                carListElement.appendChild(carCard);
-                
-            });
+        if (response.ok) {
+            alert("Alugado com sucesso! Verifique seu email.");
+            window.location.href = "carros.html";
+        } else {
+            const erro = await response.text();
+            alert(`Erro ao cadastrar: ${erro}`);
         }
-function abrirModal(id) {
-    document.getElementById(id).classList.remove('oculto');
+    } catch (error) {
+        console.error("Erro na solicitação:", error);
+        alert("Erro ao processar.");
+    }
+    
 }
 
-function fecharModal(id) {
-    document.getElementById(id).classList.add('oculto');
-}
 
-        displayCars();
 
         
