@@ -11,20 +11,27 @@
         <h1>Aluguel de Carros</h1>
     </header>
 
-    
-    <section class="car-list">
+        </div>
 
+    <section class="car-list">
         <div class="car-card">
             <img src="https://image1.mobiauto.com.br/images/api/images/v1.0/243239521/transform/fl_progressive,f_webp,q_70,w_592" alt="Onix LT 1.0">
-            <h3>Onix LT 1.0</h3>
+                <h3>Onix LT 1.0</h3>
             <p><strong>Marca:</strong> Chevrolet</p>
             <p><strong>Ano:</strong> 2022</p>
             <p><strong>Combustível:</strong> Flex</p>
             <p><strong>Portas:</strong> 4</p>
             <p><strong>Transmissão:</strong> Manual</p>
             <p><strong>Valor Diário:</strong> R$ 120,00</p>
-            <button onclick="mostrarDetalhes('Onix LT 1.0', 'Chevrolet', '2022', 'Flex', 'Manual', 'R$ 120,00')">Alugar</button>
+            <button onclick="window.location.href='detalhe'">Alugar</button>
+            <div id="modal1" class="modal oculto">
+    <div class="janela">
+        <p>Deseja realmente alugar este carro?</p>
+        <button onclick="fecharModal('modal1')">Fechar</button>
     </div>
+</div>
+        
+        </div>
 
         <div class="car-card">
             <img src="https://www.comprecar.com.br/storage/news/featured/4d8c862f-7f49-4960-9986-7cfb682702b5.jpeg" alt="HB20 Vision">

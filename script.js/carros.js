@@ -131,8 +131,16 @@
                 `;
 
                 carListElement.appendChild(carCard);
+                
             });
         }
+function abrirModal(id) {
+    document.getElementById(id).classList.remove('oculto');
+}
+
+function fecharModal(id) {
+    document.getElementById(id).classList.add('oculto');
+}
 
         displayCars();
 
